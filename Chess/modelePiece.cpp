@@ -8,7 +8,7 @@ pair<uint8_t, uint8_t> modele::ModelePiece::getPosition() {
     return position_;
 }
 
-unique_ptr<pair<uint8_t,uint8_t>[]>& modele::ModelePiece::getPositionsValides() {
+vector<pair<uint8_t,uint8_t>>& modele::ModelePiece::getPositionsValides() {
     return positionsValides_;
 }
 
