@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    VueEchiquier v;
+    vue::VueEchiquier v;
     v.show();
     // w.show();
     return QCoreApplication::exec();
