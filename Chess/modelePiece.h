@@ -8,18 +8,19 @@ namespace modele {
 class ModelePiece : public QObject
 {
     Q_OBJECT
+    friend class modeleTour;
 public:
     explicit ModelePiece(QObject *parent = nullptr);
 public slots:
     pair<uint8_t, uint8_t> getPosition();
-    virtual unique_ptr<pair<uint8_t, uint8_t>[]>& getPositionsValides() ;
+    vector<pair<uint8_t, uint8_t>>& getPositionsValides() ;
     virtual void deplacer(pair<uint8_t, uint8_t> position);
     virtual void mettreAJourPositionsValides();
 signals:
     void positionChange();
 private:
     pair<uint8_t, uint8_t> position_;
-    unique_ptr<pair<uint8_t, uint8_t>[]> positionsValides_;
+    vector<pair<uint8_t, uint8_t>> positionsValides_;
 };
 }
 

@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QGraphicsView>
 #include <QGraphicsScene>
-
+namespace vue {
 class VueEchiquier : public QGraphicsView
 {
     Q_OBJECT
@@ -19,5 +19,5 @@ private:
 
 signals:
 };
-
+}
 #endif // VUEECHIQUIER_H
