@@ -12,6 +12,7 @@ class Piece : public QObject
 {
     Q_OBJECT
     friend class Roi;
+    friend class Dame;
 public:
     explicit Piece(QObject *parent = nullptr, pair<uint8_t,uint8_t> cases = {0,0});
 public slots:
