@@ -11,6 +11,7 @@ namespace modele {
 class Piece : public QObject
 {
     Q_OBJECT
+    friend class modeleTour;
     friend class Roi;
     friend class Dame;
 public:
