@@ -1,17 +1,8 @@
 #ifndef MODELETOUR_H
 #define MODELETOUR_H
-<<<<<<< HEAD
-
-class modeleTour : public ModelePiece
-{
-public:
-    modeleTour();
-};
-
-=======
 #include "modelePiece.h"
 namespace modele {
-class modeleTour : public modele::ModelePiece
+class modeleTour : public modele::Piece
 {
 public:
     modeleTour();
