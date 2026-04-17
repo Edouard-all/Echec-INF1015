@@ -26,6 +26,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         vueEchiquier.cpp vueEchiquier.h
         modelEchiquier.cpp modelEchiquier.h
         modelePiece.cpp modelePiece.h
+        modeleTour.h modeleTour.cpp
         modeleRoi.h modeleRoi.cpp
     )
 # Define target properties for Android with Qt 6 as:
