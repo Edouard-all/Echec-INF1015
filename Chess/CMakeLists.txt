@@ -26,6 +26,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         vueEchiquier.cpp vueEchiquier.h
         modelEchiquier.cpp modelEchiquier.h
         modelePiece.cpp modelePiece.h
+        modeleTour.h modeleTour.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Chess APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
