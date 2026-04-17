@@ -1,3 +1,4 @@
+#pragma once
 #ifndef MODELECHIQUIER_H
 #define MODELECHIQUIER_H
 
@@ -15,12 +16,12 @@ class ModelEchiquier : public QObject
 public:
     explicit ModelEchiquier(QObject *parent = nullptr);
     ModelEchiquier();
-    pair<int, unique_ptr<modele::ModelePiece>>& getEchiquier(int range, int colone);
-    void placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::ModelePiece> piece);
+    pair<int, unique_ptr<modele::Piece>>& getEchiquier(int range, int colone);
+    void placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::Piece> piece);
     void movePiece(pair<uint8_t, uint8_t> initial , pair<uint8_t, uint8_t> final);
 
 private:
-    pair<int, unique_ptr<modele::ModelePiece>> echiquier_[8][8];
+    pair<int, unique_ptr<modele::Piece>> echiquier_[8][8];
 signals:
 };
 

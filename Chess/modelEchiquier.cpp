@@ -20,11 +20,11 @@ ModelEchiquier::ModelEchiquier(){
         }
     }
 }
-pair<int, unique_ptr<modele::ModelePiece>>& ModelEchiquier::getEchiquier(int range, int colonne){
+pair<int, unique_ptr<modele::Piece>>& ModelEchiquier::getEchiquier(int range, int colonne){
     return echiquier_[range][colonne];
 }
 
-void ModelEchiquier::placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::ModelePiece> piece){
+void ModelEchiquier::placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::Piece> piece){
     echiquier_[cases.first][cases.second].second = std::move(piece);
 }
 
