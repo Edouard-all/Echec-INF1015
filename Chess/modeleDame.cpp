@@ -15,7 +15,7 @@ void modele::Dame::mettreAJourPositionsValides() {
             positionsValides_.push_back(make_pair(i,position_.second));
         for(uint8_t j = 0; i < 8; j++) {
             if (j + i == i + position_.first + position_.second)
-                continue;
+                positionsValides_.push_back(make_pair(i,j));
         }
     }
     for (uint8_t i = 0; i < 8; i++) {

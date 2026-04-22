@@ -1,0 +1,37 @@
+﻿  main.cpp
+C:\Users\Édouard\Documents\Polytechnique\H2026\INF1015\Echec-INF1015\Chess\Echec\mainwindow.h(4,10): error C1083: Impossible d'ouvrir le fichier include : 'QMainWindow' : No such file or directory
+  (compiler le fichier source '../main.cpp')
+  
+  mainwindow.cpp
+C:\Users\Édouard\Documents\Polytechnique\H2026\INF1015\Echec-INF1015\Chess\Echec\mainwindow.h(4,10): error C1083: Impossible d'ouvrir le fichier include : 'QMainWindow' : No such file or directory
+  (compiler le fichier source '../mainwindow.cpp')
+  
+  modelEchiquier.cpp
+C:\Users\Édouard\Documents\Polytechnique\H2026\INF1015\Echec-INF1015\Chess\Echec\modelEchiquier.h(7,10): error C1083: Impossible d'ouvrir le fichier include : 'QObject' : No such file or directory
+  (compiler le fichier source '../modelEchiquier.cpp')
+  
+  modeleDame.cpp
+C:\Users\Édouard\Documents\Polytechnique\H2026\INF1015\Echec-INF1015\Chess\Echec\modelePiece.h(5,10): error C1083: Impossible d'ouvrir le fichier include : 'QObject' : No such file or directory
+  (compiler le fichier source '../modeleDame.cpp')
+  
+  modelePiece.cpp
+C:\Users\Édouard\Documents\Polytechnique\H2026\INF1015\Echec-INF1015\Chess\Echec\modelePiece.h(5,10): error C1083: Impossible d'ouvrir le fichier include : 'QObject' : No such file or directory
+  (compiler le fichier source '../modelePiece.cpp')
+  
+  modeleRoi.cpp
+C:\Users\Édouard\Documents\Polytechnique\H2026\INF1015\Echec-INF1015\Chess\Echec\modelePiece.h(5,10): error C1083: Impossible d'ouvrir le fichier include : 'QObject' : No such file or directory
+  (compiler le fichier source '../modeleRoi.cpp')
+  
+  modeleTour.cpp
+C:\Users\Édouard\Documents\Polytechnique\H2026\INF1015\Echec-INF1015\Chess\Echec\modelePiece.h(5,10): error C1083: Impossible d'ouvrir le fichier include : 'QObject' : No such file or directory
+  (compiler le fichier source '../modeleTour.cpp')
+  
+  raii.cpp
+C:\Users\Édouard\Documents\Polytechnique\H2026\INF1015\Echec-INF1015\Chess\Echec\modelePiece.h(5,10): error C1083: Impossible d'ouvrir le fichier include : 'QObject' : No such file or directory
+  (compiler le fichier source '../raii.cpp')
+  
+  vueEchiquier.cpp
+C:\Users\Édouard\Documents\Polytechnique\H2026\INF1015\Echec-INF1015\Chess\Echec\vueEchiquier.h(4,10): error C1083: Impossible d'ouvrir le fichier include : 'QWidget' : No such file or directory
+  (compiler le fichier source '../vueEchiquier.cpp')
+  
+  Génération de code en cours...

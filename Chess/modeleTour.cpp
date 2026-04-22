@@ -1,7 +1,10 @@
 #include "modeleTour.h"
 
+modele::Tour::Tour() {
 
-void modele::modeleTour::mettreAJourPositionsValides(){
+}
+
+void modele::Tour::mettreAJourPositionsValides(){
 
     reinitialiserPositionsValides();
     for (uint8_t i = 0; i < 8; i++){

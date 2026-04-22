@@ -3,8 +3,15 @@
 
 modele::Roi::Roi(QObject *parent)
     : modele::Piece{parent}
-{}
+{
+    if(compteurInstaces_ >= 2)
+        throw logic_error("");
+    compteurInstaces_++;
+}
 
+modele::Roi::~Roi() {
+    compteurInstaces_--;
+}
 void modele::Roi::mettreAJourPositionsValides() {
     reinitialiserPositionsValides();
     for(uint8_t i = 0; i < 3; i++) {

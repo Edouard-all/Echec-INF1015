@@ -8,6 +8,7 @@ class Dame : public Piece
 {
 public:
     explicit Dame(QObject *parent = nullptr, pair<uint8_t,uint8_t> position = {0,0});
+public slots:
     void mettreAJourPositionsValides() override;
 };
 }

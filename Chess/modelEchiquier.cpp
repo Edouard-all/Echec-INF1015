@@ -1,7 +1,6 @@
 #include "modelEchiquier.h"
 
 using namespace std;
-
 ModelEchiquier::ModelEchiquier(QObject *parent)
     : QObject{parent}
 {}

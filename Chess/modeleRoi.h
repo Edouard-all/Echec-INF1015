@@ -7,7 +7,11 @@ class Roi : public modele::Piece
 {
 public:
     explicit Roi(QObject *parent = nullptr);
+    ~Roi();
+public slots:
     void mettreAJourPositionsValides() override;
+private:
+    inline static uint8_t compteurInstaces_ = 0;
 };
 }
 
