@@ -15,8 +15,10 @@ class Jeu : public QGraphicsView
 public:
     explicit Jeu(QWidget *parent = nullptr);
     ~Jeu();
+public slots:
     void dessinerJeu();
 private:
+    vue::Piece piece_;
     vue::Echiquier echiquier_;
     QGraphicsScene* scene_;
 signals:

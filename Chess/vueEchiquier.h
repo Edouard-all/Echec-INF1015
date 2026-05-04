@@ -17,6 +17,7 @@ class Echiquier : public QGraphicsView
 public:
     explicit Echiquier(QWidget *parent = nullptr);
     void dessinerEchiquier(QGraphicsScene* scene);
+    int getTailleCarre();
 private:
     int tailleBordure_ = 8;
     int tailleCarre_ = 100;
