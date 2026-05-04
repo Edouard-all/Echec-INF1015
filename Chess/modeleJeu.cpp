@@ -1,5 +1,7 @@
 #include "modeleJeu.h"
 
-modeleJeu::modeleJeu(QObject *parent)
+namespace modele {
+Jeu::Jeu(QObject *parent)
     : QObject{parent}
 {}
+}

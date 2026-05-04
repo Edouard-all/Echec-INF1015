@@ -1,5 +1,7 @@
 #include "vuePiece.h"
 
-vue::Piece::Piece(QWidget *parent)
+namespace vue {
+Piece::Piece(QWidget *parent)
     : QWidget{parent}
 {}
+}
