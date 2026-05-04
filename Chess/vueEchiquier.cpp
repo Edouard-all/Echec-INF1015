@@ -1,7 +1,7 @@
 #include "vueEchiquier.h"
 #include <QGraphicsRectItem>
 
-vue::VueEchiquier::VueEchiquier(QWidget *parent)
+vue::Echiquier::Echiquier(QWidget *parent)
     : QGraphicsView{parent}
 {
     scene_ = new QGraphicsScene(this);
@@ -11,12 +11,12 @@ vue::VueEchiquier::VueEchiquier(QWidget *parent)
     dessinerEchiquier();
 }
 
-vue::VueEchiquier::~VueEchiquier() {
+vue::Echiquier::~Echiquier() {
     delete scene_;
     scene_ = nullptr;
 }
 
-void vue::VueEchiquier::dessinerEchiquier(){
+void vue::Echiquier::dessinerEchiquier(){
     for (int i = 0; i < tailleBordure_; i++){
         for (int j = 0; j < tailleBordure_; j++ ){
              auto carre = scene_->addRect(j*tailleCarre_, i * tailleCarre_, tailleCarre_, tailleCarre_);

@@ -1,5 +1,6 @@
 #ifndef ROI_H
 #define ROI_H
+
 #include"modelePiece.h"
 
 namespace modele {

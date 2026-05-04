@@ -1,6 +1,8 @@
 #ifndef RAII_H
 #define RAII_H
+
 #include "modelePiece.h"
+
 #include <QObject>
 
 class RAII : public QObject

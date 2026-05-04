@@ -1,11 +1,11 @@
 #include "modelEchiquier.h"
 
 using namespace std;
-ModelEchiquier::ModelEchiquier(QObject *parent)
+modele::Echiquier::Echiquier(QObject *parent)
     : QObject{parent}
 {}
 
-ModelEchiquier::ModelEchiquier(){
+modele::Echiquier::Echiquier(){
     for (uint8_t i = 0; i < 8; i++){
         for (uint8_t j = 0; j < 8; j++){
             if (i % 2 == 0){
@@ -19,15 +19,15 @@ ModelEchiquier::ModelEchiquier(){
         }
     }
 }
-pair<int, unique_ptr<modele::Piece>>& ModelEchiquier::getEchiquier(int range, int colonne){
+pair<int, unique_ptr<modele::Piece>>& modele::Echiquier::getEchiquier(int range, int colonne){
     return echiquier_[range][colonne];
 }
 
-void ModelEchiquier::placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::Piece> piece){
+void modele::Echiquier::placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::Piece> piece){
     echiquier_[cases.first][cases.second].second = std::move(piece);
 }
 
-void ModelEchiquier::movePiece(pair<uint8_t, uint8_t> initial , pair<uint8_t, uint8_t> final){
+void modele::Echiquier::movePiece(pair<uint8_t, uint8_t> initial , pair<uint8_t, uint8_t> final){
     if (echiquier_[final.first][final.second].second == nullptr){
     echiquier_[final.first][final.second].second = std::move(echiquier_[initial.first][initial.second].second);
     }

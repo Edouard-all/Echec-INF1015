@@ -7,7 +7,7 @@ modele::Tour::Tour() {
 void modele::Tour::mettreAJourPositionsValides(){
 
     reinitialiserPositionsValides();
-    for (uint8_t i = 0; i < 8; i++){
+    for (int i = 0; i < tailleEchiquier; i++){
         if (i != position_.first){
             positionsValides_.push_back(make_pair(i, position_.second));
         }

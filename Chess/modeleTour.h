@@ -1,6 +1,8 @@
 #ifndef MODELETOUR_H
 #define MODELETOUR_H
+
 #include "modelePiece.h"
+
 namespace modele {
 class Tour : public modele::Piece
 {
