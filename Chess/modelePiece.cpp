@@ -23,9 +23,8 @@ vector<pair<int,int>> Piece::getPositionsValides() {
 }
 
 void Piece::reinitialiserPositionsValides() {
-    //for (int i = 0; i < positionsValides_.size(); i++) {
+
         positionsValides_.clear();
-    //}
 }
 
 void Piece::deplacer(pair<int, int> position) {
@@ -48,3 +47,4 @@ bool modele::Piece::getEstNoir(){
 void modele::Piece::setEstNoir(bool estNoir){
     estNoir_ = estNoir;
 };
+}
