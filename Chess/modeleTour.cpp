@@ -1,10 +1,11 @@
 #include "modeleTour.h"
 
-modele::Tour::Tour() {
+namespace modele {
+Tour::Tour(QObject *parent, pair<int,int> positionInitiale)
+    : Piece{parent,positionInitiale}
+{}
 
-}
-
-void modele::Tour::mettreAJourPositionsValides(){
+void Tour::mettreAJourPositionsValides(){
 
     reinitialiserPositionsValides();
     for (int i = 0; i < tailleEchiquier; i++){
@@ -16,4 +17,5 @@ void modele::Tour::mettreAJourPositionsValides(){
             positionsValides_.push_back(make_pair(position_.first, i));
         }
     }
+}
 }

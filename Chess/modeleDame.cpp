@@ -1,5 +1,6 @@
 #include "modeleDame.h"
 
+namespace modele {
 modele::Dame::Dame(QObject *parent, pair<int,int> position)
     : modele::Piece{parent}
 {
@@ -22,4 +23,5 @@ void modele::Dame::mettreAJourPositionsValides() {
                 positionsValides_.push_back(make_pair(i,j));
         }
     }
+}
 }
