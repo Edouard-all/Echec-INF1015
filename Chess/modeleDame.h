@@ -7,7 +7,7 @@ namespace modele {
 class Dame : public Piece
 {
 public:
-    explicit Dame(QObject *parent = nullptr, pair<int,int> position = {0,0});
+    explicit Dame(pair<int,int> position = {0,0}, QObject *parent = nullptr);
 public slots:
     void mettreAJourPositionsValides() override;
 };

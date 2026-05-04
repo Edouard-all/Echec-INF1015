@@ -1,7 +1,7 @@
 #include "modeleTour.h"
 
 namespace modele {
-Tour::Tour(QObject *parent, pair<int,int> positionInitiale)
+Tour::Tour(pair<int,int> positionInitiale ,QObject *parent)
     : Piece{parent,positionInitiale}
 {}
 

@@ -1,7 +1,7 @@
 #include "modeleRoi.h"
 
 namespace modele {
-Roi::Roi(QObject *parent, pair<int,int> positionInitiale)
+Roi::Roi(pair<int,int> positionInitiale, QObject *parent)
     : Piece{parent,positionInitiale}
 {
     if(compteurInstaces_ >= 2)
