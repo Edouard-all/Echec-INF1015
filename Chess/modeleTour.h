@@ -1,11 +1,14 @@
 #ifndef MODELETOUR_H
 #define MODELETOUR_H
+
 #include "modelePiece.h"
+
 namespace modele {
-class modeleTour : public modele::Piece
+class Tour : public modele::Piece
 {
 public:
-    modeleTour();
+    Tour();
+public slots:
     void mettreAJourPositionsValides() override;
 };
 

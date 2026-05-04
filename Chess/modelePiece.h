@@ -4,29 +4,29 @@
 
 #include <QObject>
 
-class ModelEchiquier {};
 using namespace std;
 namespace modele {
-
+const int tailleEchiquier = 8;
 class Piece : public QObject
 {
     Q_OBJECT
-    friend class modeleTour;
+    friend class Tour;
     friend class Roi;
+    friend class Dame;
 public:
-    explicit Piece(QObject *parent = nullptr, pair<uint8_t,uint8_t> cases = {0,0});
+    explicit Piece(QObject *parent = nullptr, pair<int,int> cases = {0,0});
+    explicit Piece(const Piece& autre);
 public slots:
-    pair<uint8_t, uint8_t> getPosition();
-    vector<pair<uint8_t, uint8_t>>& getPositionsValides() ;
+    pair<int, int> getPosition();
+    vector<pair<int, int>> getPositionsValides() ;
     void reinitialiserPositionsValides();
-    virtual void deplacer(pair<uint8_t, uint8_t> position);
+    virtual void deplacer(pair<int, int> position);
     virtual void mettreAJourPositionsValides();
 signals:
-    void positionChange();
+    void positionChange(pair<int,int> nouvellePosition);
 private:
-    pair<uint8_t, uint8_t> position_;
-    vector<pair<uint8_t, uint8_t>> positionsValides_;
-    ModelEchiquier echiquier_;
+    pair<int, int> position_;
+    vector<pair<int, int>> positionsValides_;
 };
 }
 

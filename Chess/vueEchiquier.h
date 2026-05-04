@@ -4,14 +4,15 @@
 #include <QWidget>
 #include <QGraphicsView>
 #include <QGraphicsScene>
+
 namespace vue {
-class VueEchiquier : public QGraphicsView
+class Echiquier : public QGraphicsView
 {
     Q_OBJECT
 public:
-    explicit VueEchiquier(QWidget *parent = nullptr);
+    explicit Echiquier(QWidget *parent = nullptr);
     void dessinerEchiquier();
-    ~VueEchiquier();
+    ~Echiquier();
 private:
     QGraphicsScene* scene_;
     int tailleBordure_ = 8;
