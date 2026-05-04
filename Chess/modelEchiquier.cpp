@@ -4,13 +4,15 @@ using namespace std;
 namespace modele {
 modele::Echiquier::Echiquier(QObject *parent)
     : QObject{parent}
-{}
 
-modele::Echiquier::Echiquier(){
-    for (uint8_t i = 0; i < 8; i++){
-        for (uint8_t j = 0; j < 8; j++){
+{
+    for (uint8_t i = 0; i < 8; i++)
+    {
+        for (uint8_t j = 0; j < 8; j++)
+        {
             if (i % 2 == 0){
-                if (j % 2 == 0){
+                if (j % 2 == 0)
+                {
                     echiquier_[i][j].first = 0; // 0 représente la case claire
                 }
                 else{
@@ -20,6 +22,7 @@ modele::Echiquier::Echiquier(){
         }
     }
 }
+
 pair<int, unique_ptr<modele::Piece>>& modele::Echiquier::getEchiquier(int range, int colonne){
     return echiquier_[range][colonne];
 }

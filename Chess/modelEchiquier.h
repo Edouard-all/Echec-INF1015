@@ -17,7 +17,6 @@ class Echiquier : public QObject
     Q_OBJECT
 public:
     explicit Echiquier(QObject *parent = nullptr);
-    Echiquier();
     pair<int, unique_ptr<modele::Piece>>& getEchiquier(int range, int colone);
     void placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::Piece> piece);
     void movePiece(pair<uint8_t, uint8_t> initial , pair<uint8_t, uint8_t> final);
