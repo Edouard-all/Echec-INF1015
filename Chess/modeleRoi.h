@@ -7,7 +7,7 @@ namespace modele {
 class Roi : public modele::Piece
 {
 public:
-    explicit Roi(QObject *parent = nullptr,pair<int,int> positionInitiale = {0,0});
+    explicit Roi(pair<int,int> positionInitiale = {0,0}, QObject *parent = nullptr);
     ~Roi();
 public slots:
     void mettreAJourPositionsValides() override;

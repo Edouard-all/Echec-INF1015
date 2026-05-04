@@ -14,8 +14,16 @@ public:
     void jouerPartie();
     void menu();
     void initialisationPartie();
+
+    template <typename T>
+    void initialisationPiece(T piece, pair<int, int> positionInitiale, bool estNoir);
+
     void PlacerNoirInit();
     void PlacerBlancInit();
+    void initialiserFinaleRoiVsRoi();
+    void initialiserFinaleRoiDameVsRoi();
+    void initialiserFinaleRoiTourVsRoi();
+    void initialiserFinaleRoiDameVsRoiTour();
 
 private:
     Echiquier echiquier_;
