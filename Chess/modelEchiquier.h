@@ -5,17 +5,19 @@
 
 
 #include <QObject>
+
 #include "modelePiece.h"
+
 #include <utility>
 
 using namespace std;
-
-class ModelEchiquier : public QObject
+namespace modele {
+class Echiquier : public QObject
 {
     Q_OBJECT
 public:
-    explicit ModelEchiquier(QObject *parent = nullptr);
-    ModelEchiquier();
+    explicit Echiquier(QObject *parent = nullptr);
+    Echiquier();
     pair<int, unique_ptr<modele::Piece>>& getEchiquier(int range, int colone);
     void placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::Piece> piece);
     void movePiece(pair<uint8_t, uint8_t> initial , pair<uint8_t, uint8_t> final);
@@ -24,5 +26,5 @@ private:
     pair<int, unique_ptr<modele::Piece>> echiquier_[8][8];
 signals:
 };
-
+}
 #endif // MODELECHIQUIER_H

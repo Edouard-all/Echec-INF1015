@@ -28,6 +28,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         modelePiece.cpp modelePiece.h
         modeleTour.h modeleTour.cpp
         modeleRoi.h modeleRoi.cpp
+        modeleDame.h modeleDame.cpp
+        raii.h raii.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Chess APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
