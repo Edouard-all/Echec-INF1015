@@ -1,6 +1,7 @@
 #include "modelEchiquier.h"
 
 using namespace std;
+namespace modele {
 modele::Echiquier::Echiquier(QObject *parent)
     : QObject{parent}
 
@@ -40,4 +41,5 @@ void modele::Echiquier::movePiece(pair<uint8_t, uint8_t> initial , pair<uint8_t,
         echiquier_[final.first][final.second].second.reset();
         echiquier_[final.first][final.second].second = std::move(echiquier_[initial.first][initial.second].second);
     }
+}
 }

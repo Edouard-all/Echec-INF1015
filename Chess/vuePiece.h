@@ -4,14 +4,14 @@
 #include <QWidget>
 
 namespace vue {
-    class Piece : public QWidget
-    {
-        Q_OBJECT
-    public:
-        explicit Piece(QWidget *parent = nullptr);
+class Piece : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit Piece(QWidget *parent = nullptr);
 
-    signals:
-    };
+signals:
+};
 }
 
 #endif // VUEPIECE_H

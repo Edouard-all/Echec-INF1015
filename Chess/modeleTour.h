@@ -4,10 +4,10 @@
 #include "modelePiece.h"
 
 namespace modele {
-class Tour : public modele::Piece
+class Tour : public Piece
 {
 public:
-    Tour();
+    explicit Tour(QObject *parent = nullptr,pair<int,int> positionInitiale = {0,0});
 public slots:
     void mettreAJourPositionsValides() override;
 };
