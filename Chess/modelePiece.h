@@ -20,6 +20,8 @@ public slots:
     pair<int, int> getPosition();
     vector<pair<int, int>> getPositionsValides() ;
     void reinitialiserPositionsValides();
+    bool getEstNoir();
+    void setEstNoir(bool estNoir);
     virtual void deplacer(pair<int, int> position);
     virtual void mettreAJourPositionsValides();
 signals:

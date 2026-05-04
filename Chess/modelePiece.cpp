@@ -39,3 +39,11 @@ void modele::Piece::deplacer(pair<int, int> position) {
 void modele::Piece::mettreAJourPositionsValides() {
 
 }
+
+bool modele::Piece::getEstNoir(){
+    return estNoir_;
+};
+
+void modele::Piece::setEstNoir(bool estNoir){
+    estNoir_ = estNoir;
+};
