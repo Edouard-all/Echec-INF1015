@@ -5,12 +5,15 @@
 * \date   21 avril 2026
 * Créé le 13 avril 2026
 */
+
 #include "mainwindow.h"
 #include "vueEchiquier.h"
 #include "modeleRoi.h"
 #include "modeleTour.h"
 #include "modeleDame.h"
 #include "raii.h"
+#include "vuePiece.h"
+#include "vueJeu.h"
 #include <iostream>
 
 #include <QApplication>
@@ -20,10 +23,14 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+
     MainWindow w;
-    vue::Echiquier v;
-    v.show();
+    vue::Jeu j;
+    vue::Piece p;
+    j.show();
     // w.show();
+    p.dessinerPiece();
     modele::Roi roi1;
     modele::Roi roi2;
     try {

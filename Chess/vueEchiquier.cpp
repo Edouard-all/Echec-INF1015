@@ -3,23 +3,13 @@
 
 vue::Echiquier::Echiquier(QWidget *parent)
     : QGraphicsView{parent}
-{
-    scene_ = new QGraphicsScene(this);
+{}
 
-    setScene(scene_);
 
-    dessinerEchiquier();
-}
-
-vue::Echiquier::~Echiquier() {
-    delete scene_;
-    scene_ = nullptr;
-}
-
-void vue::Echiquier::dessinerEchiquier(){
+void vue::Echiquier::dessinerEchiquier(QGraphicsScene* scene){
     for (int i = 0; i < tailleBordure_; i++){
         for (int j = 0; j < tailleBordure_; j++ ){
-             QGraphicsRectItem* carre = scene_->addRect(j*tailleCarre_, i * tailleCarre_, tailleCarre_, tailleCarre_);
+             QGraphicsRectItem* carre = scene->addRect(j*tailleCarre_, i * tailleCarre_, tailleCarre_, tailleCarre_);
             if (i % 2 == 0){
                  if (j % 2 == 0){
                  carre->setBrush(Qt::white);

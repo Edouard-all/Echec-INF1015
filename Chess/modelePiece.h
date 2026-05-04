@@ -26,6 +26,7 @@ public slots:
     virtual void mettreAJourPositionsValides();
 signals:
     void positionChange(pair<int,int> nouvellePosition);
+    void couleurInitialise(bool estNoir);
 private:
     pair<int, int> position_;
     vector<pair<int, int>> positionsValides_;

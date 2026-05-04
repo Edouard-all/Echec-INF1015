@@ -1,10 +1,10 @@
 #include "modelePiece.h"
 
 namespace modele {
-Piece::Piece(QObject *parent, pair<int,int> cases)
+Piece::Piece(QObject *parent, pair<int,int> positionInitiale)
     : QObject{parent}
 {
-    position_ = cases;
+    position_ = positionInitiale;
 }
 
 Piece::Piece(const Piece& autre) {
@@ -40,11 +40,11 @@ void Piece::mettreAJourPositionsValides() {
 
 }
 
-bool modele::Piece::getEstNoir(){
+bool Piece::getEstNoir(){
     return estNoir_;
 };
 
-void modele::Piece::setEstNoir(bool estNoir){
+void Piece::setEstNoir(bool estNoir){
     estNoir_ = estNoir;
 };
 }

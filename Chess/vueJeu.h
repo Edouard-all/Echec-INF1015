@@ -2,17 +2,23 @@
 #define VUEJEU_H
 
 #include <QWidget>
+#include <QGraphicsView>
+#include <QGraphicsScene>
 
 #include "vueEchiquier.h"
+#include "vuePiece.h"
 
 namespace vue {
-class Jeu : public QWidget
+class Jeu : public QGraphicsView
 {
     Q_OBJECT
 public:
     explicit Jeu(QWidget *parent = nullptr);
+    ~Jeu();
+    void dessinerJeu();
 private:
-    vue::Echiquier echiquier;
+    vue::Echiquier echiquier_;
+    QGraphicsScene* scene_;
 signals:
 };
 }

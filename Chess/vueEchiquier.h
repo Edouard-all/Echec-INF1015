@@ -9,12 +9,15 @@ namespace vue {
 class Echiquier : public QGraphicsView
 {
     Q_OBJECT
+    friend class Jeu;
+    friend class Piece;
+    friend class Roi;
+    friend class Dame;
+    friend class Tour;
 public:
     explicit Echiquier(QWidget *parent = nullptr);
-    void dessinerEchiquier();
-    ~Echiquier();
+    void dessinerEchiquier(QGraphicsScene* scene);
 private:
-    QGraphicsScene* scene_;
     int tailleBordure_ = 8;
     int tailleCarre_ = 100;
 

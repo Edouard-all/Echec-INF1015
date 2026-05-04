@@ -1,13 +1,11 @@
 #include "modeleDame.h"
 
 namespace modele {
-modele::Dame::Dame(pair<int,int> position, QObject *parent)
-    : modele::Piece{parent}
-{
-    position_ = position;
-}
+Dame::Dame(QObject *parent, pair<int,int> positionInitiale)
+    : Piece{parent,positionInitiale}
+{}
 
-void modele::Dame::mettreAJourPositionsValides() {
+void Dame::mettreAJourPositionsValides() {
     reinitialiserPositionsValides();
     for (int i = 0; i < tailleEchiquier; i++) {
         if (i != position_.second)
