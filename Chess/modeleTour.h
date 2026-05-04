@@ -12,5 +12,4 @@ public:
 }
 
 
->>>>>>> main
 #endif // MODELETOUR_H
