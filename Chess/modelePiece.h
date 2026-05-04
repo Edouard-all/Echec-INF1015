@@ -27,6 +27,7 @@ signals:
 private:
     pair<int, int> position_;
     vector<pair<int, int>> positionsValides_;
+    bool estNoir_;
 };
 }
 

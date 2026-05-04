@@ -30,6 +30,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         modeleRoi.h modeleRoi.cpp
         modeleDame.h modeleDame.cpp
         raii.h raii.cpp
+        modeleJeu.h modeleJeu.cpp
         vueJeu.h vueJeu.cpp
         vuePiece.h vuePiece.cpp
         vueRoi.h vueRoi.cpp
