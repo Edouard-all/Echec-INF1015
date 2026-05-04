@@ -2,14 +2,20 @@
 #define MODELEJEU_H
 
 #include <QObject>
+namespace  modele {
 
-class modeleJeu : public QObject
+
+class Jeu : public QObject
 {
     Q_OBJECT
 public:
-    explicit modeleJeu(QObject *parent = nullptr);
+    explicit Jeu(QObject *parent = nullptr);
+    void menu();
+    void initialisation();
+
 
 signals:
 };
+}
 
 #endif // MODELEJEU_H
