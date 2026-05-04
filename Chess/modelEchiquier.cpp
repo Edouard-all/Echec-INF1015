@@ -28,6 +28,7 @@ pair<int, unique_ptr<modele::Piece>>& modele::Echiquier::getEchiquier(int range,
 
 void modele::Echiquier::placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::Piece> piece){
     echiquier_[cases.first][cases.second].second = std::move(piece);
+    piece.
 }
 
 void modele::Echiquier::movePiece(pair<uint8_t, uint8_t> initial , pair<uint8_t, uint8_t> final){
