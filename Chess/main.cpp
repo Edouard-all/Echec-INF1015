@@ -29,7 +29,6 @@ int main(int argc, char *argv[])
     vue::Jeu j;
     vue::Piece p;
     j.show();
-    p.show();
 
     modele::Roi roi1;
     modele::Roi roi2;
