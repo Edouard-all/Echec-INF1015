@@ -30,3 +30,7 @@ void vue::Echiquier::dessinerEchiquier(QGraphicsScene* scene){
         }
     }
 }
+
+int vue::Echiquier::getTailleCarre() {
+    return tailleCarre_;
+}

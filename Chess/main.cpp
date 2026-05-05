@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     vue::Piece p;
     j.show();
     p.show();
-    p.dessinerPiece();
+
     modele::Roi roi1;
     modele::Roi roi2;
     try {
