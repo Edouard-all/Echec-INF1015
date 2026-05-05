@@ -1,7 +1,7 @@
 #include "modeleDame.h"
 
 namespace modele {
-Dame::Dame(QObject *parent, pair<int,int> positionInitiale)
+Dame::Dame(pair<int,int> positionInitiale, QObject *parent)
     : Piece{parent,positionInitiale}
 {}
 
