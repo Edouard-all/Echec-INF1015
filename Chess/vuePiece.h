@@ -25,7 +25,7 @@ signals:
 private:
     bool estNoir_;
     pair<int,int> position_;
-    QLabel *piece_;
+    QLabel* piece_;
     Echiquier echiquier_;
     //QPixmap image_(":/Images/DarkKing.jpg");
 };

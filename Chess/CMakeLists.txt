@@ -36,6 +36,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         vueRoi.h vueRoi.cpp
         vueTour.h vueTour.cpp
         vueDame.h vueDame.cpp
+        ressource.qrc
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Chess APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
