@@ -19,12 +19,13 @@ class Jeu : public QGraphicsView
 public:
     explicit Jeu(QWidget *parent = nullptr);
     ~Jeu();
-    void initialisationPieceNoir(QGraphicsScene* scene);
+    /*void initialisationPieceNoir(QGraphicsScene* scene);
     void initialisationPieceBlanche(QGraphicsScene* scene);
-    void initialisationPiece(unique_ptr<Piece> piece, bool estNoir, QGraphicsScene* scene);
+    void initialisationPiece(QGraphicsScene* scene);*/
     void initialisationsPieces(QGraphicsScene* scene);
-public slots:
     void dessinerJeu();
+public slots:
+    void initialisationPiece(string piece, pair<int,int> positionInitiale, bool estNoir);
 private:
     vector<unique_ptr<Piece>> piece_;
     Echiquier echiquier_;

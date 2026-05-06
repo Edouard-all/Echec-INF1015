@@ -24,6 +24,7 @@ namespace modele {
         unique_ptr<T> t = make_unique<T>(positionInitiale);
         t->setEstNoir(estNoir);
         echiquier_.placerPiece(positionInitiale, std::move(t));
+        emit pieceInitialise(piece.getNom() , positionInitiale, estNoir);
     };
 
 

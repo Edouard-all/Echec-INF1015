@@ -4,6 +4,8 @@
 
 #include <QObject>
 #include "modelEchiquier.h"
+
+
 namespace  modele {
 
 
@@ -30,6 +32,9 @@ private:
     Echiquier echiquier_;
 
 signals:
+    void pieceInitialise(string piece, pair<int,int> position, bool estNoir);
+    /*void pieceInitialise(unique_ptr<Dame> piece, pair<int,int> position, bool estNoir);
+    void pieceInitialise(unique_ptr<Tour> piece, pair<int,int> position, bool estNoir);*/
 };
 }
 

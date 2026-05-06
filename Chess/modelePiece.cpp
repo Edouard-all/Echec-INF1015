@@ -1,9 +1,10 @@
 #include "modelePiece.h"
 
 namespace modele {
-Piece::Piece(QObject *parent, pair<int,int> positionInitiale)
+Piece::Piece(QObject *parent, pair<int,int> positionInitiale, string nom)
     : QObject{parent}
 {
+    nom_ = nom;
     position_ = positionInitiale;
 }
 
@@ -12,6 +13,10 @@ Piece::Piece(const Piece& autre) {
     for(pair<int,int> position : autre.positionsValides_) {
         positionsValides_.push_back(make_pair(position.first, position.second));
     }
+}
+
+string Piece::getNom() {
+    return nom_;
 }
 
 pair<int, int> Piece::getPosition() {

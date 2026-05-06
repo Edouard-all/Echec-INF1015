@@ -2,7 +2,7 @@
 
 using namespace std;
 namespace modele {
-modele::Echiquier::Echiquier(QObject *parent)
+Echiquier::Echiquier(QObject *parent)
     : QObject{parent}
 
 {
@@ -23,15 +23,15 @@ modele::Echiquier::Echiquier(QObject *parent)
     }
 }
 
-pair<int, unique_ptr<modele::Piece>>& modele::Echiquier::getEchiquier(int range, int colonne){
+pair<int, unique_ptr<Piece>>& Echiquier::getEchiquier(int range, int colonne){
     return echiquier_[range][colonne];
 }
 
-void modele::Echiquier::placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::Piece> piece){
+void Echiquier::placerPiece(pair<uint8_t, uint8_t> cases, unique_ptr<modele::Piece> piece){
     echiquier_[cases.first][cases.second].second = std::move(piece);
 }
 
-void modele::Echiquier::movePiece(pair<uint8_t, uint8_t> initial , pair<uint8_t, uint8_t> final){
+void Echiquier::movePiece(pair<uint8_t, uint8_t> initial , pair<uint8_t, uint8_t> final){
     if (echiquier_[final.first][final.second].second == nullptr){
     echiquier_[final.first][final.second].second = std::move(echiquier_[initial.first][initial.second].second);
     }

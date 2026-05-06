@@ -20,13 +20,13 @@ public:
     ~Piece();
     Echiquier& getEchiquier();
     bool getCouleur();
-    virtual void dessinerPiece(QGraphicsScene* scene);
 
 public slots:
+    virtual void dessinerPiece(QGraphicsScene* scene);
     void setCouleur(bool estNoir);
     void setPosition(pair<int,int> position);
 signals:
-
+    void positionChange(pair<int,int> position);
 private:
     bool estNoir_;
     pair<int,int> position_;

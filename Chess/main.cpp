@@ -8,9 +8,12 @@
 
 #include "mainwindow.h"
 #include "vueEchiquier.h"
+
 #include "modeleRoi.h"
 #include "modeleTour.h"
 #include "modeleDame.h"
+#include "modeleJeu.h"
+
 #include "raii.h"
 #include "vuePiece.h"
 #include "vueJeu.h"
@@ -27,10 +30,13 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     vue::Jeu j;
+    modele::Jeu jeu;
+    QObject::connect(&jeu, SIGNAL(pieceInitialise(string piece, pair<int,int> position, bool estNoir)), &j, SLOT(initialisationPiece(string piece, pair<int,int> positionInitiale, bool estNoir)));
+    jeu.initialiserFinaleRoiDameVsRoiTour();
     vue::Piece p;
     j.show();
 
-    modele::Roi roi1;
+    /*modele::Roi roi1;
     modele::Roi roi2;
     try {
         modele::Roi roi3;
@@ -77,7 +83,7 @@ int main(int argc, char *argv[])
     cout << "(" << dame.getPosition().first <<"," << dame.getPosition().second << ")" << endl;
     raii3.~RAII();
     cout << "(" << dame.getPosition().first <<"," << dame.getPosition().second << ")" << endl;
-
+    */
     cout << "fin" << endl;
 
     return QCoreApplication::exec();

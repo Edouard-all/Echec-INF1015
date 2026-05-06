@@ -2,7 +2,7 @@
 
 namespace modele {
 Tour::Tour(pair<int,int> positionInitiale ,QObject *parent)
-    : Piece{parent,positionInitiale}
+    : Piece{parent, positionInitiale, "tour"}
 {}
 
 void Tour::mettreAJourPositionsValides(){

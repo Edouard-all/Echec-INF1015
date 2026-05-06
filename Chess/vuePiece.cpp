@@ -6,6 +6,7 @@ Piece::Piece(QWidget* parent)
     : QWidget{parent}
 {
     piece_ = new ItemPiece();
+    positionPiece_ = piece_->getPositionPiece();
 }
 
 Piece::~Piece() {
@@ -34,6 +35,8 @@ bool Piece::getCouleur(){
 
 void Piece::setPosition(pair<int,int> position) {
     position_ = position;
+    positionPiece_ = piece_->getPositionPiece();
+    emit positionChange(position_);
 }
 
 }
