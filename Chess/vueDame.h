@@ -10,7 +10,12 @@ class Dame : public vue::Piece
 {
 public:
     Dame();
+    ~Dame();
     virtual void dessinerPiece(QGraphicsScene* scene) override;
+
+private:
+    ItemPiece* piece_;
+    pair<int,int> position_;
 
 };
 

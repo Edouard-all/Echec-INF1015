@@ -2,7 +2,14 @@
 
 namespace vue {
 
-Tour::Tour() {}
+Tour::Tour() {
+    piece_ = new ItemPiece();
+}
+
+Tour::~Tour(){
+    delete piece_;
+    piece_ = nullptr;
+}
 
 void Tour::dessinerPiece(QGraphicsScene* scene){
     QPixmap image;
@@ -15,8 +22,9 @@ void Tour::dessinerPiece(QGraphicsScene* scene){
     }
 
     QPixmap imageRedimentionne = image.scaled(getEchiquier().getTailleCarre(), getEchiquier().getTailleCarre());
-    setPixmap(imageRedimentionne);
-    scene->addItem(this);
+    piece_->setPixmap(imageRedimentionne);
+    scene->addItem(piece_);
+    piece_->setPos(position_.first * getEchiquier().getTailleCarre(), position_.second * getEchiquier().getTailleCarre());
 }
 
 } // namespace vue

@@ -3,13 +3,19 @@
 
 #include "vuePiece.h"
 
+
 namespace vue {
 
 class Roi : public vue::Piece
 {
 public:
     Roi();
+    ~Roi();
     virtual void dessinerPiece(QGraphicsScene* scene) override;
+
+private:
+    ItemPiece* piece_;
+    pair<int,int> position_;
 
 };
 
