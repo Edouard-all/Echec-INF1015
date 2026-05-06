@@ -17,7 +17,7 @@ Jeu::~Jeu() {
 }
 
 void Jeu::dessinerJeu() {
-    //piece_.setPosition({0,1});
+    piece_.setPosition({0,1});
     echiquier_.dessinerEchiquier(scene_);
     piece_.dessinerPiece(scene_);
     show();
