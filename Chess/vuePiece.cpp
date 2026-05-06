@@ -13,7 +13,7 @@ Piece::~Piece() {
     piece_ = nullptr;
 }
 void Piece::setCouleur(bool estNoir) {
-
+    estNoir_ = estNoir;
 }
 
 void Piece::mousePressEvent(QGraphicsSceneMouseEvent* event) {
@@ -37,9 +37,16 @@ void Piece::dessinerPiece(QGraphicsScene* scene) {
     QPixmap image(":/images/Images/DarkKing.png");
     QPixmap imageRedimentionne = image.scaled(echiquier_.getTailleCarre(), echiquier_.getTailleCarre());
     setPixmap(imageRedimentionne);
-
     scene->addItem(this);
 
+}
+
+Echiquier& Piece::getEchiquier() {
+    return echiquier_;
+}
+
+bool Piece::getCouleur(){
+    return estNoir_;
 }
 
 void Piece::setPosition(pair<int,int> position) {

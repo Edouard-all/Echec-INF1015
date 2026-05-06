@@ -7,6 +7,9 @@
 
 #include "vueEchiquier.h"
 #include "vuePiece.h"
+#include "vueRoi.h"
+#include "vueDame.h"
+#include "vueTour.h"
 
 namespace vue {
 class Jeu : public QGraphicsView
@@ -15,11 +18,15 @@ class Jeu : public QGraphicsView
 public:
     explicit Jeu(QWidget *parent = nullptr);
     ~Jeu();
+    void initialisationPieceNoir(QGraphicsScene* scene);
+    void initialisationPieceBlanche(QGraphicsScene* scene);
+    void initialisationPiece(unique_ptr<Piece> piece, bool estNoir, QGraphicsScene* scene);
+    void initialisationsPieces(QGraphicsScene* scene);
 public slots:
     void dessinerJeu();
 private:
-    vue::Piece piece_;
-    vue::Echiquier echiquier_;
+    vector<unique_ptr<Piece>> piece_;
+    Echiquier echiquier_;
     QGraphicsScene* scene_;
 signals:
 };

@@ -9,7 +9,8 @@ class Roi : public vue::Piece
 {
 public:
     Roi();
-    //virtual void dessinerPiece(QGraphicsScene* scene) override;
+    virtual void dessinerPiece(QGraphicsScene* scene) override;
+
 };
 
 } // namespace vue

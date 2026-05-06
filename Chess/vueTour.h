@@ -9,6 +9,8 @@ class Tour : public vue::Piece
 {
 public:
     Tour();
+    virtual void dessinerPiece(QGraphicsScene* scene) override;
+
 };
 
 } // namespace vue
