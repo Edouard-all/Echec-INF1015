@@ -5,18 +5,22 @@
 #include <QGraphicsProxyWidget>
 #include <QLabel>
 #include <QPixmap>
-
+#include <QGraphicsSceneMouseEvent>
 #include "vueEchiquier.h"
 
 using namespace std;
 namespace vue {
-class Piece : public QWidget
+class Piece : public QGraphicsPixmapItem
 {
-    Q_OBJECT
+
 public:
-    explicit Piece(QWidget *parent = nullptr);
+    explicit Piece(QGraphicsPixmapItem* parent = nullptr);
     ~Piece();
-    void dessinerPiece(QGraphicsScene* scene);
+    void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
+    void mouseMoveEvent(QGraphicsSceneMouseEvent* event) override;
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent* event) override;
+    virtual void dessinerPiece(QGraphicsScene* scene);
+
 public slots:
     void setCouleur(bool estNoir);
     void setPosition(pair<int,int> position);
@@ -25,6 +29,7 @@ signals:
 private:
     bool estNoir_;
     pair<int,int> position_;
+    QPointF positionPiece_;
     QGraphicsPixmapItem* piece_;
     Echiquier echiquier_;
     //QPixmap image_(":/Images/DarkKing.jpg");
