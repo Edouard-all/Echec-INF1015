@@ -8,6 +8,7 @@
 
 #include "mainwindow.h"
 #include "vueEchiquier.h"
+#include "modeleJeu.h"
 #include "modeleRoi.h"
 #include "modeleTour.h"
 #include "modeleDame.h"
@@ -26,6 +27,8 @@ int main(int argc, char *argv[])
 
 
     MainWindow w;
+    //modele::Jeu jeu;
+    //jeu.initialisationPartie();
     vue::Jeu j;
     vue::Piece p;
     j.show();

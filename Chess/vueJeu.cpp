@@ -5,6 +5,8 @@ Jeu::Jeu(QWidget *parent)
     : QGraphicsView{parent}
 {
     scene_ = new QGraphicsScene(this);
+    bouton_ = new QPushButton("Menu");
+    menu_= new QMenu();
 
     setScene(scene_);
 
@@ -14,6 +16,12 @@ Jeu::Jeu(QWidget *parent)
 Jeu::~Jeu() {
     delete scene_;
     scene_ = nullptr;
+
+    delete bouton_;
+    bouton_ = nullptr;
+
+    delete menu_;
+    menu_ = nullptr;
 }
 
 void Jeu::initialisationPiece(unique_ptr<Piece> piece, bool estNoir, QGraphicsScene* scene){
@@ -40,10 +48,24 @@ void Jeu::initialisationsPieces(QGraphicsScene* scene){
     initialisationPieceBlanche(scene);
 }
 
+void Jeu::dessinerMenu(){
+
+    menu_->addAction("Roi + Tour vs Roi");
+    menu_->addAction("Roi + Dame vs Roi");
+    menu_->addAction("Roi + 2 Fous vs Roi");
+
+    bouton_->setMenu(menu_);
+
+    scene_->addWidget(bouton_);
+    proxy_ = scene_->addWidget(bouton_);
+    proxy_->setPos(0,20);
+}
+
 void Jeu::dessinerJeu() {
     echiquier_.dessinerEchiquier(scene_);
     initialisationsPieces(scene_);
-    show();
+    dessinerMenu();
+
 }
 
 }

@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <QPushButton>
+#include <QMenu>
 
 #include "vueEchiquier.h"
 #include "vuePiece.h"
@@ -22,12 +24,17 @@ public:
     void initialisationPieceBlanche(QGraphicsScene* scene);
     void initialisationPiece(unique_ptr<Piece> piece, bool estNoir, QGraphicsScene* scene);
     void initialisationsPieces(QGraphicsScene* scene);
+    void dessinerMenu();
 public slots:
     void dessinerJeu();
 private:
     vector<unique_ptr<Piece>> piece_;
     Echiquier echiquier_;
     QGraphicsScene* scene_;
+    QMenu* menu_;
+    QPushButton* bouton_;
+    QGraphicsProxyWidget* proxy_;
+
 signals:
 };
 }

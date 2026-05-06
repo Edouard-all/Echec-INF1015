@@ -4,7 +4,7 @@ namespace modele {
 Roi::Roi(pair<int,int> positionInitiale, QObject *parent)
     : Piece{parent,positionInitiale}
 {
-    if(compteurInstaces_ >= 2)
+    if(compteurInstaces_ > 2)
         throw logic_error("");
     compteurInstaces_++;
 }
