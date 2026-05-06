@@ -34,7 +34,7 @@ void Piece::mouseReleaseEvent(QGraphicsSceneMouseEvent* event){
 }
 
 void Piece::dessinerPiece(QGraphicsScene* scene) {
-    QPixmap image(":/images/Images/DarkKing.jpg");
+    QPixmap image(":/images/Images/DarkKing.png");
     QPixmap imageRedimentionne = image.scaled(echiquier_.getTailleCarre(), echiquier_.getTailleCarre());
     setPixmap(imageRedimentionne);
 
