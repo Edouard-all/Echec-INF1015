@@ -2,7 +2,15 @@
 
 namespace vue {
 
-Dame::Dame() {}
+Dame::Dame() {
+
+    piece_ = new ItemPiece();
+}
+
+Dame::~Dame(){
+    delete piece_;
+    piece_ = nullptr;
+}
 
 void Dame::dessinerPiece(QGraphicsScene* scene){
     QPixmap image;
@@ -15,8 +23,9 @@ void Dame::dessinerPiece(QGraphicsScene* scene){
     }
 
     QPixmap imageRedimentionne = image.scaled(getEchiquier().getTailleCarre(), getEchiquier().getTailleCarre());
-    setPixmap(imageRedimentionne);
-    scene->addItem(this);
+    piece_->setPixmap(imageRedimentionne);
+    scene->addItem(piece_);
+    piece_->setPos(position_.first * getEchiquier().getTailleCarre(), position_.second * getEchiquier().getTailleCarre());
 }
 
 } // namespace vue

@@ -8,18 +8,16 @@
 #include <QPixmap>
 #include <QGraphicsSceneMouseEvent>
 #include "vueEchiquier.h"
+#include "itemPiece.h"
 
 using namespace std;
 namespace vue {
-class Piece : public QGraphicsPixmapItem
+class Piece : public QWidget
 {
-
+Q_OBJECT
 public:
-    explicit Piece(QGraphicsPixmapItem* parent = nullptr);
+    explicit Piece(QWidget* parent = nullptr);
     ~Piece();
-    void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
-    void mouseMoveEvent(QGraphicsSceneMouseEvent* event) override;
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent* event) override;
     Echiquier& getEchiquier();
     bool getCouleur();
     virtual void dessinerPiece(QGraphicsScene* scene);
@@ -33,7 +31,7 @@ private:
     bool estNoir_;
     pair<int,int> position_;
     QPointF positionPiece_;
-    QGraphicsPixmapItem* piece_;
+    ItemPiece* piece_;
     Echiquier echiquier_;
     //QPixmap image_(":/Images/DarkKing.jpg");
 };

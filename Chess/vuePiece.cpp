@@ -2,10 +2,10 @@
 
 
 namespace vue {
-Piece::Piece(QGraphicsPixmapItem* parent)
-    : QGraphicsPixmapItem{parent}
+Piece::Piece(QWidget* parent)
+    : QWidget{parent}
 {
-    piece_ = new QGraphicsPixmapItem();
+    piece_ = new ItemPiece();
 }
 
 Piece::~Piece() {
@@ -16,29 +16,12 @@ void Piece::setCouleur(bool estNoir) {
     estNoir_ = estNoir;
 }
 
-void Piece::mousePressEvent(QGraphicsSceneMouseEvent* event) {
-    positionPiece_ = pos();
-}
-
-void Piece::mouseMoveEvent(QGraphicsSceneMouseEvent* event){
-    QPointF positionSouris = event->scenePos();
-    setPos(positionSouris - QPointF(echiquier_.tailleCarre_/2, echiquier_.tailleCarre_/2));
-
-}
-
-void Piece::mouseReleaseEvent(QGraphicsSceneMouseEvent* event){
-    QPointF positionSouris = event->scenePos();
-    int x = int(positionSouris.x() / echiquier_.tailleCarre_);
-    int y = int(positionSouris.y() / echiquier_.tailleCarre_);
-    setPos(x * echiquier_.tailleCarre_, y * echiquier_.tailleCarre_);
-}
-
 void Piece::dessinerPiece(QGraphicsScene* scene) {
     QPixmap image(":/images/Images/DarkKing.png");
     QPixmap imageRedimentionne = image.scaled(echiquier_.getTailleCarre(), echiquier_.getTailleCarre());
-    setPixmap(imageRedimentionne);
-    scene->addItem(this);
-
+    piece_->setPixmap(imageRedimentionne);
+    scene->addItem(piece_);
+    piece_->setPos(position_.first * echiquier_.getTailleCarre(), position_.second * echiquier_.getTailleCarre());
 }
 
 Echiquier& Piece::getEchiquier() {
