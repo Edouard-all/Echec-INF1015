@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VUEJEU_H
 #define VUEJEU_H
 

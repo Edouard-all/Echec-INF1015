@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VUEROI_H
 #define VUEROI_H
 

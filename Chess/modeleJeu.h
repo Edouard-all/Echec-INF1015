@@ -1,3 +1,4 @@
+#pragma once
 #ifndef MODELEJEU_H
 #define MODELEJEU_H
 

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VUETOUR_H
 #define VUETOUR_H
 

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VUEECHIQUIER_H
 #define VUEECHIQUIER_H
 

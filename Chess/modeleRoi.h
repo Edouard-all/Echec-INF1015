@@ -1,3 +1,4 @@
+#pragma once
 #ifndef ROI_H
 #define ROI_H
 

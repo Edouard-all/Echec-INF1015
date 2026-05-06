@@ -1,3 +1,4 @@
+#pragma once
 #ifndef MODELETOUR_H
 #define MODELETOUR_H
 

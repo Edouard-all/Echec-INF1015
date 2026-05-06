@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VUEDAME_H
 #define VUEDAME_H
 

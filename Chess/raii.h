@@ -1,3 +1,4 @@
+#pragma once
 #ifndef RAII_H
 #define RAII_H
 

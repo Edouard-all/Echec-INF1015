@@ -1,3 +1,4 @@
+#pragma once
 #ifndef MODELEDAME_H
 #define MODELEDAME_H
 

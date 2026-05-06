@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VUEPIECE_H
 #define VUEPIECE_H
 
