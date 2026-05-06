@@ -10,6 +10,8 @@ class Dame : public vue::Piece
 {
 public:
     Dame();
+    virtual void dessinerPiece(QGraphicsScene* scene) override;
+
 };
 
 } // namespace vue
