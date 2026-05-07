@@ -5,6 +5,8 @@
 #include <QWidget>
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <QPushButton>
+#include <QMenu>
 
 #include "vueEchiquier.h"
 #include "vuePiece.h"
@@ -21,6 +23,10 @@ public:
     ~Jeu();
     /*void initialisationPieceNoir(QGraphicsScene* scene);
     void initialisationPieceBlanche(QGraphicsScene* scene);
+    void initialisationPiece(unique_ptr<Piece> piece, bool estNoir, QGraphicsScene* scene);
+    void initialisationsPieces(QGraphicsScene* scene);
+    void dessinerMenu();
+public slots:
     void initialisationPiece(QGraphicsScene* scene);*/
     void initialiserPieces(QGraphicsScene* scene);
     void dessinerJeu();
@@ -30,6 +36,10 @@ private:
     vector<unique_ptr<Piece>> piece_;
     Echiquier echiquier_;
     QGraphicsScene* scene_;
+    QMenu* menu_;
+    QPushButton* bouton_;
+    QGraphicsProxyWidget* proxy_;
+
 signals:
 };
 }

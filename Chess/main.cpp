@@ -8,6 +8,7 @@
 
 #include "mainwindow.h"
 #include "vueEchiquier.h"
+#include "modeleJeu.h"
 
 #include "modeleRoi.h"
 #include "modeleTour.h"
