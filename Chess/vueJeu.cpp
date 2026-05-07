@@ -16,23 +16,23 @@ Jeu::~Jeu() {
     scene_ = nullptr;
 }
 
-void Jeu::initialisationPiece(string piece, pair<int,int> positionInitiale, bool estNoir){
+void Jeu::initialiserPiece(QString piece, int x, int y, bool estNoir){
     if (piece == "roi") {
         unique_ptr<Roi> roi = make_unique<Roi>();
         roi->setCouleur(estNoir);
-        roi->setPosition(positionInitiale);
+        roi->setPosition({x, y});
         piece_.push_back(std::move(roi));
     }
     else if (piece == "dame") {
         unique_ptr<Dame> dame = make_unique<Dame>();
         dame->setCouleur(estNoir);
-        dame->setPosition(positionInitiale);
+        dame->setPosition({x, y});
         piece_.push_back(std::move(dame));
     }
     else if (piece == "tour") {
         unique_ptr<Tour> tour = make_unique<Tour>();
         tour->setCouleur(estNoir);
-        tour->setPosition(positionInitiale);
+        tour->setPosition({x, y});
         piece_.push_back(std::move(tour));
     }
     /*piece->setCouleur(estNoir);
@@ -54,7 +54,7 @@ void Jeu::initialisationPieceBlanche(QGraphicsScene* scene){
     initialisationPiece(make_unique<Tour>(), 0, scene);
 }
 */
-void Jeu::initialisationsPieces(QGraphicsScene* scene){
+void Jeu::initialiserPieces(QGraphicsScene* scene){
     /*initialisationPieceNoir(scene);
     initialisationPieceBlanche(scene);*/
     for (auto& piece: piece_) {
@@ -64,7 +64,7 @@ void Jeu::initialisationsPieces(QGraphicsScene* scene){
 
 void Jeu::dessinerJeu() {
     echiquier_.dessinerEchiquier(scene_);
-    initialisationsPieces(scene_);
+    initialiserPieces(scene_);
     show();
 }
 

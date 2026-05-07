@@ -32,7 +32,7 @@ private:
     Echiquier echiquier_;
 
 signals:
-    void pieceInitialise(string piece, pair<int,int> position, bool estNoir);
+    void pieceInitialise(QString piece, int x, int y, bool estNoir);
     /*void pieceInitialise(unique_ptr<Dame> piece, pair<int,int> position, bool estNoir);
     void pieceInitialise(unique_ptr<Tour> piece, pair<int,int> position, bool estNoir);*/
 };

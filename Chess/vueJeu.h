@@ -22,10 +22,10 @@ public:
     /*void initialisationPieceNoir(QGraphicsScene* scene);
     void initialisationPieceBlanche(QGraphicsScene* scene);
     void initialisationPiece(QGraphicsScene* scene);*/
-    void initialisationsPieces(QGraphicsScene* scene);
+    void initialiserPieces(QGraphicsScene* scene);
     void dessinerJeu();
 public slots:
-    void initialisationPiece(string piece, pair<int,int> positionInitiale, bool estNoir);
+    void initialiserPiece(QString piece, int x, int y, bool estNoir);
 private:
     vector<unique_ptr<Piece>> piece_;
     Echiquier echiquier_;

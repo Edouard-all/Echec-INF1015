@@ -14,7 +14,10 @@ using namespace std;
 namespace vue {
 class Piece : public QWidget
 {
-Q_OBJECT
+    Q_OBJECT
+    friend class Tour;
+    friend class Roi;
+    friend class Dame;
 public:
     explicit Piece(QWidget* parent = nullptr);
     ~Piece();
@@ -30,7 +33,7 @@ signals:
 private:
     bool estNoir_;
     pair<int,int> position_;
-    QPointF positionPiece_;
+    //QPointF positionPiece_;
     ItemPiece* piece_;
     Echiquier echiquier_;
     //QPixmap image_(":/Images/DarkKing.jpg");

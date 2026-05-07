@@ -1,7 +1,7 @@
 #include "modelePiece.h"
 
 namespace modele {
-Piece::Piece(QObject *parent, pair<int,int> positionInitiale, string nom)
+Piece::Piece(QObject *parent, pair<int,int> positionInitiale, QString nom)
     : QObject{parent}
 {
     nom_ = nom;
@@ -15,7 +15,7 @@ Piece::Piece(const Piece& autre) {
     }
 }
 
-string Piece::getNom() {
+QString Piece::getNom() {
     return nom_;
 }
 

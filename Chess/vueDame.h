@@ -16,7 +16,7 @@ public:
 
 private:
     ItemPiece* piece_;
-    pair<int,int> position_;
+    //pair<int,int> position_;
 
 };
 

@@ -22,3 +22,7 @@ void ItemPiece::mouseReleaseEvent(QGraphicsSceneMouseEvent* event){
 QPointF ItemPiece::getPositionPiece() {
     return positionPiece_;
 }
+
+void ItemPiece::setPositionPiece(QPointF nouvellePosition) {
+    positionPiece_ = nouvellePosition;
+}
