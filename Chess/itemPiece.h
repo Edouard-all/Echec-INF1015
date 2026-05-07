@@ -8,6 +8,8 @@ class ItemPiece : public QGraphicsPixmapItem
 {
 public:
     ItemPiece();
+    QPointF getPositionPiece();
+    void setPositionPiece(QPointF nouvllePosition);
 protected:
     void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
     void mouseMoveEvent(QGraphicsSceneMouseEvent* event) override;

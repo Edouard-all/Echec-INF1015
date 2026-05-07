@@ -18,3 +18,11 @@ void ItemPiece::mouseReleaseEvent(QGraphicsSceneMouseEvent* event){
     int y = int(positionSouris.y() / tailleCase_);
     setPos(x * tailleCase_, y * tailleCase_);
 }
+
+QPointF ItemPiece::getPositionPiece() {
+    return positionPiece_;
+}
+
+void ItemPiece::setPositionPiece(QPointF nouvellePosition) {
+    positionPiece_ = nouvellePosition;
+}

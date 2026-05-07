@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VUEJEU_H
 #define VUEJEU_H
 
@@ -20,13 +21,17 @@ class Jeu : public QGraphicsView
 public:
     explicit Jeu(QWidget *parent = nullptr);
     ~Jeu();
-    void initialisationPieceNoir(QGraphicsScene* scene);
+    /*void initialisationPieceNoir(QGraphicsScene* scene);
     void initialisationPieceBlanche(QGraphicsScene* scene);
     void initialisationPiece(unique_ptr<Piece> piece, bool estNoir, QGraphicsScene* scene);
     void initialisationsPieces(QGraphicsScene* scene);
     void dessinerMenu();
 public slots:
+    void initialisationPiece(QGraphicsScene* scene);*/
+    void initialiserPieces(QGraphicsScene* scene);
     void dessinerJeu();
+public slots:
+    void initialiserPiece(QString piece, int x, int y, bool estNoir);
 private:
     vector<unique_ptr<Piece>> piece_;
     Echiquier echiquier_;

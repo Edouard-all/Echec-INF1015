@@ -1,8 +1,11 @@
+#pragma once
 #ifndef MODELEJEU_H
 #define MODELEJEU_H
 
 #include <QObject>
 #include "modelEchiquier.h"
+
+
 namespace  modele {
 
 
@@ -29,6 +32,9 @@ private:
     Echiquier echiquier_;
 
 signals:
+    void pieceInitialise(QString piece, int x, int y, bool estNoir);
+    /*void pieceInitialise(unique_ptr<Dame> piece, pair<int,int> position, bool estNoir);
+    void pieceInitialise(unique_ptr<Tour> piece, pair<int,int> position, bool estNoir);*/
 };
 }
 

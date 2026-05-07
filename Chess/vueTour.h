@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VUETOUR_H
 #define VUETOUR_H
 
@@ -13,7 +14,7 @@ public:
     virtual void dessinerPiece(QGraphicsScene* scene) override;
 private:
     ItemPiece* piece_;
-    pair<int,int> position_;
+    //pair<int,int> position_;
 
 };
 

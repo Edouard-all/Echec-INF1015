@@ -9,9 +9,12 @@
 #include "mainwindow.h"
 #include "vueEchiquier.h"
 #include "modeleJeu.h"
+
 #include "modeleRoi.h"
 #include "modeleTour.h"
 #include "modeleDame.h"
+#include "modeleJeu.h"
+
 #include "raii.h"
 #include "vuePiece.h"
 #include "vueJeu.h"
@@ -25,15 +28,23 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    /*Counter c1, c2;
+    QObject::connect(&c1, SIGNAL(valueChanged(int)),
+                     &c2, SLOT(setValue(int)));
+    c1.setValue(42);
+    cout << "C1: " << c1.getValue()
+         << "; C2: " << c2.getValue()
+      << endl; // C1: 42; C2: 42*/
 
     MainWindow w;
-    //modele::Jeu jeu;
-    //jeu.initialisationPartie();
-    vue::Jeu j;
+    vue::Jeu* jeuVue = new vue::Jeu;
+    modele::Jeu* jeuModele = new modele::Jeu;
+    bool i = QObject::connect(jeuModele, SIGNAL(pieceInitialise(QString, int , int, bool)), jeuVue, SLOT(initialiserPiece(QString, int, int, bool)));
+    jeuModele->initialisationPartie();
     vue::Piece p;
-    j.show();
+    jeuVue->dessinerJeu();
 
-    modele::Roi roi1;
+    /*modele::Roi roi1;
     modele::Roi roi2;
     try {
         modele::Roi roi3;
@@ -80,7 +91,7 @@ int main(int argc, char *argv[])
     cout << "(" << dame.getPosition().first <<"," << dame.getPosition().second << ")" << endl;
     raii3.~RAII();
     cout << "(" << dame.getPosition().first <<"," << dame.getPosition().second << ")" << endl;
-
+    */
     cout << "fin" << endl;
 
     return QCoreApplication::exec();

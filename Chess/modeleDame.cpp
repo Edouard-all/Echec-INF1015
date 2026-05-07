@@ -2,7 +2,7 @@
 
 namespace modele {
 Dame::Dame(pair<int,int> positionInitiale, QObject *parent)
-    : Piece{parent,positionInitiale}
+    : Piece{parent,positionInitiale, "dame"}
 {}
 
 void Dame::mettreAJourPositionsValides() {

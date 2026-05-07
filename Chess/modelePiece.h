@@ -14,8 +14,9 @@ class Piece : public QObject
     friend class Roi;
     friend class Dame;
 public:
-    explicit Piece(QObject *parent = nullptr, pair<int,int> cases = {0,0});
+    explicit Piece(QObject *parent = nullptr, pair<int,int> cases = {0,0}, QString nom = "piece");
     explicit Piece(const Piece& autre);
+    QString getNom();
 public slots:
     pair<int, int> getPosition();
     vector<pair<int, int>> getPositionsValides() ;
@@ -31,6 +32,7 @@ private:
     pair<int, int> position_;
     vector<pair<int, int>> positionsValides_;
     bool estNoir_;
+    QString nom_;
 };
 }
 
