@@ -50,9 +50,11 @@ void Jeu::initialisationsPieces(QGraphicsScene* scene){
 
 void Jeu::dessinerMenu(){
 
-    menu_->addAction("Roi + Tour vs Roi");
-    menu_->addAction("Roi + Dame vs Roi");
-    menu_->addAction("Roi + 2 Fous vs Roi");
+    menu_->addAction("Nouvelle partie");
+    menu_->addAction("Finale Roi vs Roi");
+    menu_->addAction("Finale Roi + Dame vs Roi");
+    menu_->addAction("Finale Roi + Tour vs Roi");
+    menu_->addAction("Finale Roi + Dame vs Roi + Tour");
 
     bouton_->setMenu(menu_);
 
